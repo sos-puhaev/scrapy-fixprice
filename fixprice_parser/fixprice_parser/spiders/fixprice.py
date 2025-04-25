@@ -54,7 +54,6 @@ class ProductsSpider(scrapy.Spider):
                     'playwright_page_methods': [
                         PageMethod('wait_for_load_state', 'networkidle', timeout=180000),
                         PageMethod('evaluate', '''() => {
-                            // Эмулируем человеческое поведение
                             window.scrollBy(0, 500);
                             return true;
                         }'''),
